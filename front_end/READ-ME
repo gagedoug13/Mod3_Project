@@ -1,0 +1,22 @@
+AUDIO DENVER - 
+
+description - 
+Audio Denver allows you to view current concerts that are taking place in Denver.
+The app utelizes the StubHub API to fetch all of the concerts, along with their other information.
+Each of the concert cards will tell you whether the concert is sold out, has many, or very few tickets left
+The name of the concert is clickable and will open a new tab that takes you to the StubHub tickets page
+
+Steps to using this product -
+Clone it down from GitHub "https://github.com/gagedoug13/Mod3_Project"
+In your terminal, type git clone and paste the cloned link
+Bundle install in the terminal
+Apply for an API key on https://developer.stubhub.com/products
+Once you've received an access token, plug it in as the authorization value in the show.js file on line 68
+On line 63, fetch to "https://api.stubhub.com/sellers/search/events/v3" (you can add the parameters you want to fetch after v3)
+Run lite-server in your terminal!
+
+Other features I want to implement - 
+So something I really wanted to do is show and sort the concerts by closest to furthest from my location.
+This specific API doesn't offer lat/lng coordinates, but if it did, I could plug the coordinates into 
+the Google Maps Matrix API to show the distance from a given location.
+I would also like to make other filter methods to display the concerts in different orders.

@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Audio Denver</title>
+    <script src="https://kit.fontawesome.com/6ed5c42746.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
         <img class = "sound-logo" src = "Audio Denver.png"/>
         <h1 class = "welcome">Welcome To Audio Denver</h1>
+        <a class = "view-shows" href = "http://localhost:3000/show.html"><i class="fab fa-soundcloud"></i>  </a>
+        
     </header>
     <div class="user-div">
-        <form class="user-form" action="http://localhost:3000/users" method="POST">
-            <label for="name">See Concerts Near You</label>
-            <input type="text" name="name" id="name"/>
-            <input type="submit"/>   
-            <img class = "background-photo" src = "nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg"/>
-        </form>
+        <div class = "form-div" >   
+            <form autocomplete="off" class="user-form" action="http://localhost:3000/users" method="POST">
+                <h1 class = "sign-in">Sign In</h1>
+                <input placeholder="Username" type="text" name="Username">
+                <input placeholder="Password" type="password" name="Password">
+                <input class="button" type = "button" value = "Enter">
+            </form>
+        </div>   
     </div>
     <script src="user.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=Washington,DC&destinations=New+York+City,NY&key=AIzaSyB8KZZQcWwvgVaErPux7jjl1RnsVs8EuTg"></script> -->
 </body>
 </html>
