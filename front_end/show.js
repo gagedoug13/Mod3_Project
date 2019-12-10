@@ -4,21 +4,12 @@ function createShowCard(shows) {
     const div = document.createElement('div')
     div.className = "showCard"
 
-// const bandsForm = document.querySelector('.bands-form')
-//     button.addEventListener('submit', event => {
-//     event.preventDefault()
-    
 
     shows.events.forEach(show => {
         
-      
-
         let divCard = document.createElement("div")
         divCard.className = "eachShowCard"
 
-
-
-        const band = document.createElement('h3')
         const date = document.createElement('p')
         const venue = document.createElement('p')
         const tickets = document.createElement('p')
@@ -29,7 +20,7 @@ function createShowCard(shows) {
         venue.className = "venue"
         a_tag.href = `https://www.stubhub.com/${show.webURI}`
         a_tag.target = "_blank"
-        margin1
+
         
         a_tag.innerHTML = `${show.performers[0].name}`
         date.innerText = `${show.eventDateLocal.slice(0,10)}`
@@ -49,14 +40,6 @@ function createShowCard(shows) {
     })
     body.append(div)
 }
-
-
-// fetch("http://localhost:3000/shows")
-//     .then(response => response.json())
-//     .then(createShowCard)
-
-
-
     
     const concertURL = "https://api.stubhub.com/sellers/search/events/v3?city=Denver&rows=100&categoryName=Concert"
     
@@ -71,6 +54,3 @@ function createShowCard(shows) {
       .then(response => response.json())
       .then(shows => createShowCard(shows))
       .catch(console.log)
-    //   .then(shows => console.log(shows.events))
-    
-
